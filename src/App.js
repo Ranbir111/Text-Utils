@@ -37,10 +37,10 @@ function App() {
       <Alert alert={alert}/>
       <Routes>
         <Route exact path="/" element={
-          <TextForm heading="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>
+          <TextForm heading="TextUtils - Word Counter, Character Counter, Capitalizer" mode={mode} showAlert={showAlert}/>
         }/>
         <Route exact path="/about" element={
-          <About/>
+          <About mode={mode} />
         }/>
       </Routes>
     </BrowserRouter>

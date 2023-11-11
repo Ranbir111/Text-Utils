@@ -7,7 +7,7 @@ export default function Navbar(props) {
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          {props.title}
+          <b>{props.title}</b>
         </Link>
         <button
           className="navbar-toggler"
@@ -28,27 +28,15 @@ export default function Navbar(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link active" to="/about">
                 {props.aboutText}
               </Link>
             </li>
           </ul>
           <div className="d-flex">
-            {/* <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button> */}
-            {/* <button className="btn mx-2 btn-dark">
-              🌙
-            </button> */}
             <div className="form-check form-switch">
               <input className="form-check-input" onClick={props.toggleMode} type="checkbox" id="flexSwitchCheckDefault"/>
-              <label className="form-check-label text">🌛</label>
+              <label className="form-check-label text" htmlFor='flexSwitchCheckDefault'>🌛</label>
             </div>
           </div>
         </div>
